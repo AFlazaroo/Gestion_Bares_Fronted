@@ -1,0 +1,29 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'" [(opened)]="opened">
+    <mat-toolbar>Menú</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/administrador/inicio-bar" (click)="sidenav.close()" class="menu-link">Inicio</a>
+      <a mat-list-item routerLink="/administrador/crear-bar" (click)="sidenav.close()" class="menu-link">Crear Bar</a>
+      <a mat-list-item routerLink="/administrador/listar-bares" (click)="sidenav.close()" class="menu-link">Listar Bares</a>
+      <a mat-list-item routerLink="/administrador/actualizar-bar" (click)="sidenav.close()" class="menu-link">Actualizar Bar</a>
+      <a mat-list-item routerLink="/administrador/eliminar-bar" (click)="sidenav.close()" class="menu-link">Eliminar Bar</a>
+      <a mat-list-item routerLink="/administrador/estadisticas-bar" (click)="sidenav.close()" class="menu-link">Estadisticas</a>
+      <a mat-list-item routerLink="/administrador/configuracion" (click)="sidenav.close()" class="menu-link">Configuracion</a>
+      <img src="/assets/oso.jpg" alt="Imagen debajo de los enlaces" class="imagen-debajo">
+      <!-- Añade más enlaces según sea necesario -->
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar>
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Administrador de Bares</span>
+      <span>Perfil</span>
+    </mat-toolbar>
+    <div class="content">
+      <router-outlet></router-outlet> <!-- Aquí se renderizarán los componentes hijos -->
+      <app-inicio-bar *ngIf="mostrarListarBares"></app-inicio-bar> <!-- Nuevo componente para listar bares -->
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

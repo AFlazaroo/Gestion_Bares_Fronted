@@ -1,0 +1,34 @@
+.login-container {
+    background-image: url('/assets/FondoBarWeb.png');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .login-box {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 40px; /* Aumenta el espacio interno */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px; /* Ajusta el ancho máximo */
+    width: 100%; /* Utiliza todo el ancho disponible */
+  }
+  
+  .login-box h2 {
+    font-size: 24px; /* Aumenta el tamaño del título */
+  }
+  
+  .form-group {
+    margin-bottom: 20px; /* Aumenta el espacio entre los campos */
+  }
+  
+  .form-control {
+    font-size: 16px; /* Aumenta el tamaño del texto en los campos de entrada */
+  }
+  
+  .btn {
+    font-size: 18px; /* Aumenta el tamaño del texto en los botones */
+  }
+  
