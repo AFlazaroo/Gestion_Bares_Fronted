@@ -7,7 +7,7 @@ import { Proveedor } from './proveedor';
   providedIn: 'root'
 })
 export class ProveedorService {
-  private urlBase = "http://localhost:8081/api/proveedores/proveedor"
+  private urlBase = "http://localhost:8081/bares-app/controllerProveedor/proveedor"
   constructor(private clienteHttp: HttpClient) { }
 
   obtenerProveedorLista(): Observable<Proveedor[]>{

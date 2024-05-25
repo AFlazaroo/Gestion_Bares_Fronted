@@ -7,7 +7,7 @@ import { Cliente } from './cliente';
   providedIn: 'root'
 })
 export class ClienteService {
-  private urlBase = "http://localhost:8081/api/clientes";
+  private urlBase = "http://localhost:8081/bares-app/controllerCliente";
 
   constructor(private clienteHttp: HttpClient) { }
 
