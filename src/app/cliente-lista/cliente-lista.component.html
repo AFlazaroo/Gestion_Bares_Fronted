@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="container text-center" style="margin: 30px;">
+     <h3>Clientes Registrados </h3>
+    </div> 
+    <table class="table table-striped table-hover align-middle">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Dirección</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Edad</th>
+            <th scope="col">Historial de gasto</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Ocupación</th>
+            <th scope="col">Telefono</th>
+            <th scope="col">Beneficio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cliente of clientes">
+            <th scope="row">{{cliente.idCliente}}</th>
+            <td>{{cliente.direccion}}</td>
+            <td>{{cliente.estado}}</td>
+            <td>{{cliente.edad}}</td>
+            <td>{{cliente.historialGasto}}</td>
+            <td>{{cliente.nombre}}</td>
+            <td>{{cliente.ocupacion}}</td>
+            <td>{{cliente.telefono}}</td>
+            <td>{{cliente.idBeneficio}}</td>
+          </tr>
+                      
+        </tbody>
+      </table>
+    </div>

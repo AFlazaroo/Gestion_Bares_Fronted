@@ -1,0 +1,21 @@
+<!-- Botón de menú hamburguesa -->
+<button mat-icon-button [matMenuTriggerFor]="menu">
+  <mat-icon>menu</mat-icon>
+</button>
+
+<!-- Menú de navegación -->
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/inicio-factura" routerLinkActive="active">Principal</button>
+  <button mat-menu-item [matMenuTriggerFor]="facturacionMenu">Facturación</button>
+    <mat-menu #facturacionMenu="matMenu">
+      <button mat-menu-item routerLink="/factura" routerLinkActive="active">Crear Factura</button>
+    </mat-menu>
+    <button mat-menu-item routerLink="/clientes" routerLinkActive="active">Clientes</button>
+    <button mat-menu-item routerLink="/proveedores" routerLinkActive="active">Proveedores</button>
+    <button mat-menu-item routerLink="/inventario" routerLinkActive="active">Inventario</button>
+    <button mat-menu-item>Reportes</button>
+    <button mat-menu-item>Cerrar sesión</button>
+  </mat-menu>
+
+<!-- Asegurar que el router-outlet esté fuera del menú -->
+<router-outlet></router-outlet>
