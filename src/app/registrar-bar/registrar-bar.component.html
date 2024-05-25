@@ -1,0 +1,37 @@
+<div class="container">
+  <form (ngSubmit)="onSubmit()">
+    <label for="nombreDueño">Nombre dueño: </label>
+    <input type="text" id="nombreDueño" [(ngModel)]="bar.nombreDueno" name="nombreDueno">
+    <br><br>
+    <label for="nombreBar">Nombre: </label>
+    <input type="text" id="nombreBar" [(ngModel)]="bar.nombreBar" name="nombreBar">
+    <br><br>
+    <label for="tipoBar">Tipo: </label>
+    <select id="tipoBar" [(ngModel)]="bar.tipoBar" name="tipoBar">
+      <option value="Tradicional">Tradicional</option>
+      <option value="Bar-cafe">Bar-cafe</option>
+      <option value="Bar-restaurante">Bar-restaurante</option>
+      <option value="Bar-pub">Bar-pub</option>
+      <option value="Bar-Karaoke">Bar-Karaoke</option>
+      <option value="Chiringuito">Bar-playa (Chiringuito)</option>
+      <option value="Bar-piano">Piano-Bar</option>
+      <option value="SportBar">SportBar</option>
+      <option value="SkyBar">SkyBar</option>
+      <option value="Taberna">Taberna</option>
+    </select>
+    <br><br>
+    <label for="direccionBar">Direccion: </label>
+    <input type="text" id="direccionBar" [(ngModel)]="bar.direccion" name="direccionBar">
+    <br><br>
+    <label for="horario">Horario: </label>
+    <input type="text" id="horario" [(ngModel)]="bar.horario" name="horario" placeholder="HH:MM(PM-AM) - HH:MM(PM-AM)">
+    <br><br>
+    <label for="capacidadBar">Capacidad: </label>
+    <input type="number" id="capacidadBar" [(ngModel)]="bar.capacidad" name="capacidadBar">
+    <br><br>
+    <label for="numeroBar">Numero telefonico: </label>
+    <input type="text" id="numeroBar" [(ngModel)]="bar.telefono" name="telefono">
+    <br><br>
+    <button type="submit">Guardar</button>
+  </form>
+</div>

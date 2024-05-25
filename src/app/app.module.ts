@@ -28,6 +28,10 @@ import { ProveedoresMayorComprasComponent } from './proveedores-mayor-compras/pr
 import { FacturaComponent } from './factura/factura.component';
 import { InicioFacturaComponent } from './inicio-factura/inicio-factura.component';
 import { AdministradorComponent } from './administrador/administrador.component';
+import { RegistrarBarComponent } from './registrar-bar/registrar-bar.component';
+import { EditarBarComponent } from './editar-bar/editar-bar.component';
+import { RegistrarBebidaComponent } from './registrar-bebida/registrar-bebida.component';
+import { RegistroBandaComponent } from './registro-banda/registro-banda.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +47,12 @@ import { AdministradorComponent } from './administrador/administrador.component'
     ProveedoresMayorComprasComponent,
     FacturaComponent,
     InicioFacturaComponent,
-    AdministradorComponent
+    AdministradorComponent,
+    RegistrarBarComponent,
+    AppComponent,
+    EditarBarComponent,
+    RegistrarBebidaComponent,
+    RegistroBandaComponent
   ],
   imports: [
     BrowserModule,

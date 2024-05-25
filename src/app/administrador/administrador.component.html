@@ -1,31 +1,24 @@
 <mat-sidenav-container class="sidenav-container">
-    <mat-sidenav #sidenav class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'" [(opened)]="opened">
-      <mat-toolbar>Menú</mat-toolbar>
-      <mat-nav-list>
-        <a mat-list-item routerLink="/inicio-administrador" (click)="sidenav.close()" class="menu-link">Inicio</a>
-        <a mat-list-item routerLink="/registro-bar" (click)="sidenav.close()" class="menu-link">Crear Bar</a>
-        <a mat-list-item routerLink="/listar-bar" (click)="sidenav.close()" class="menu-link">Listar Bares</a>
-        <a mat-list-item routerLink="/registro-bebida" (click)="sidenav.close()" class="menu-link">Crear Bebida</a>
-        <a mat-list-item routerLink="/listar-bebida" (click)="sidenav.close()" class="menu-link">Listar Bebida</a>
-        <a mat-list-item routerLink="/registro-cliente" (click)="sidenav.close()" class="menu-link">Crear cliente</a>
-        <a mat-list-item routerLink="/registro-banda" (click)="sidenav.close()" class="menu-link">Crear Banda</a>
-        <a mat-list-item routerLink="/registro-provedor" (click)="sidenav.close()" class="menu-link">Crear Provedor</a>
-        <a mat-list-item routerLink="/registro-empleado" (click)="sidenav.close()" class="menu-link">Crear Empleado</a>
-        <a mat-list-item routerLink="/registro-beneficio" (click)="sidenav.close()" class="menu-link">Crear Beneficio</a>
-        <a mat-list-item routerLink="/registro-evento" (click)="sidenav.close()" class="menu-link">Crear Evento</a>
-        <img src="/assets/oso.jpg" alt="Imagen debajo de los enlaces" class="imagen-debajo">
-      </mat-nav-list>
-    </mat-sidenav>
-    <mat-sidenav-content>
-      <mat-toolbar>
-        <button mat-icon-button (click)="sidenav.toggle()">
-          <mat-icon>menu</mat-icon>
-        </button>
-        <span>Administrador de Bares</span>
-        <span>Perfil</span>
-      </mat-toolbar>
-      <div class="content">
-        <router-outlet></router-outlet> <!-- Aquí se renderizarán los componentes hijos -->
-      </div>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
+  <mat-sidenav #sidenav class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'" [(opened)]="opened">
+    <mat-toolbar>Menú</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="inicio-administrador" (click)="sidenav.close()" class="menu-link">Inicio</a>
+      <a mat-list-item routerLink="registro-bar" (click)="sidenav.close()" class="menu-link">Crear Bar</a>
+      <a mat-list-item routerLink="lista-bar" (click)="sidenav.close()" class="menu-link">Lista Bar</a>
+      <a mat-list-item routerLink="registro-bebida" (click)="sidenav.close()" class="menu-link">Crear Bebida</a>
+      <a mat-list-item routerLink="lista-bebida" (click)="sidenav.close()" class="menu-link">Lista Bebida</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar>
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Administrador de Bares</span>
+      <span>Perfil</span>
+    </mat-toolbar>
+    <div class="content">
+      <router-outlet></router-outlet> <!-- Aquí se renderizarán los componentes hijos -->
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

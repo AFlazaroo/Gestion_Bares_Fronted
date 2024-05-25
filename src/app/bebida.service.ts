@@ -7,7 +7,7 @@ import { Bebida } from './bebida';
   providedIn: 'root'
 })
 export class BebidaService {
-  private urlBase = "http://localhost:8081/api/bebidas";
+  private urlBase = "http://localhost:8081/bares-app/controllerBebida/bebida";
 
   constructor(private clienteHttp: HttpClient) { }
 
@@ -21,5 +21,9 @@ export class BebidaService {
     params = params.append('disponibilidad', disponibilidad.toString());
 
     return this.clienteHttp.get<Bebida[]>(`${this.urlBase}/buscar`, { params: params });
+  }
+
+  agregarBebida(bebida:Bebida){
+    return this.clienteHttp.post(this.urlBase, bebida);
   }
 }
