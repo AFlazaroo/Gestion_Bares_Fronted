@@ -15,6 +15,7 @@
             <th scope="col">Horario</th>
             <th scope="col">Capacidad</th>
             <th scope="col">Telefono</th>
+            <th scope="col">Editar</th>
           </tr>
         </thead>
         <tbody>
@@ -27,6 +28,11 @@
             <td>{{bar.horario}}</td>
             <td>{{bar.capacidad}}</td>
             <td>{{bar.telefono}}</td>
+            <td class="text-center">
+              <div>
+                <button (click)="editarBar(bar.idBar)">Editar</button>
+              </div>
+            </td>
           </tr>
           
         </tbody>

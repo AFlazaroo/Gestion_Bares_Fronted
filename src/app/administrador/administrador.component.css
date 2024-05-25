@@ -1,47 +1,47 @@
 .sidenav-container {
-    height: 100%;
-  }
-  
-  .sidenav {
-    width: 250px;
-  }
-  
-  .mat-toolbar {
-    background: #2e2a08;
-    color: white;
-  }
-  
-  .content {
-    margin: 20px;
-    position: relative; /* Asegúrate de que .content tenga posición relativa */
-  }
-  
-  .background-image {
-    height: 500px; /* Ajusta la altura según tus necesidades */
-    background-image: url('/assets/ad.jpg');
-    background-size: cover;
-    background-position: center;
-    border: 1px solid #ccc; /* Añade una línea que divide */
-    margin-bottom: 0px; /* Espacio debajo de la imagen */
-  }
-  
+  height: 100%;
+}
+
+.sidenav {
+  width: 250px;
+}
+
+.mat-toolbar {
+  background: #2e2a08;
+  color: white;
+}
+
+.content {
+  margin: 20px;
+  position: relative; /* Asegúrate de que .content tenga posición relativa */
+}
+
+.background-image {
+  height: 500px; /* Ajusta la altura según tus necesidades */
+  background-image: url('/assets/ad.jpg');
+  background-size: cover;
+  background-position: center;
+  border: 1px solid #ccc; /* Añade una línea que divide */
+  margin-bottom: 0px; /* Espacio debajo de la imagen */
+}
+
+.menu-link {
+  font-size: 20px; /* Tamaño de fuente más grande */
+  padding: 15px 20px; /* Aumenta el padding para hacer los enlaces más grandes */
+  display: block; /* Asegura que los enlaces ocupen toda la anchura del contenedor */
+}
+
+.menu-link:hover {
+  background-color: #ddd; /* Cambia el color de fondo al pasar el mouse */
+}
+
+
+@media (max-width: 600px) {
   .menu-link {
-    font-size: 20px; /* Tamaño de fuente más grande */
-    padding: 15px 20px; /* Aumenta el padding para hacer los enlaces más grandes */
-    display: block; /* Asegura que los enlaces ocupen toda la anchura del contenedor */
-  }
-  
-  .menu-link:hover {
-    background-color: #ddd; /* Cambia el color de fondo al pasar el mouse */
-  }
-  
-  
-  @media (max-width: 600px) {
-    .menu-link {
-      font-size: 18px; /* Tamaño de fuente más grande en pantallas pequeñas */
-    } 
-  }
-  .imagen-debajo {
-    width: 100%; /* Establece el ancho al 20% del tamaño original */
-    height: 20%; /* Deja que la altura se ajuste automáticamente para mantener la proporción */
-  }
+    font-size: 18px; /* Tamaño de fuente más grande en pantallas pequeñas */
+  } 
+}
+.imagen-debajo {
+  width: 100%; /* Establece el ancho al 20% del tamaño original */
+  height: 20%; /* Deja que la altura se ajuste automáticamente para mantener la proporción */
+}
