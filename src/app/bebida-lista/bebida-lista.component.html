@@ -1,43 +1,32 @@
 <div class="container">
-  <form action="">
-      <label for="nombre">Nombre de la bebida:</label>
-      <input type="text" id="nombre" required>
-      <br><br>
-      <label for="descripcion">Descripción detallada:</label>
-      <input type="text" id="descripcion" required>
-      <br><br>
-      <label for="marca">Marca:</label>
-      <input type="text" id="marca" required>
-      <br><br>
-      <label for="tipo">Tipo de bebida:</label>
-      <input type="text" id="tipo" required>
-      <br><br>
-      <label for="disponibilidad">Disponibilidad: (Cantidad)</label>
-      <input type="number" id="disponibilidad" required>
-      <br><br>
-      <label for="precio">Precio:</label>
-      <input type="number" id="precio" required>
-      <br><br>
-      <label for="idProvedor">Provedor:</label>
-      <select>
-        <option value="1">Distribuidora Norte</option>
-        <option value="2">Bebidas del Sur</option>
-        <option value="3">Licores del Este</option>
-        <option value="4">Vinos del Oeste</option>
-        <option value="5">Refrescos y Más</option>
-        <option value="6">Aguas Purificadas</option>
-        <option value="7">Café Supremo</option>
-        <option value="8">Snacks y Botanas</option>
-        <option value="9">Dulces y Golosinas</option>
-        <option value="10">Distribuidora Universal</option>
-        <option value="11">Frutas y Verduras</option>
-        <option value="12">Panadería del Sol</option>
-        <option value="13">Lácteos del Valle</option>
-        <option value="14">Carne y Más</option>
-        <option value="15">Mariscos del Mar</option>
-        <option value="16">Condimentos y Especias</option>
-        <option value="17">Bebidas Energéticas</option>
-      </select>
-      <button type="submit">Enviar</button>
-  </form>
-</div>
+  <div class="container text-center" style="margin: 30px;">
+   <h3>Bebidas Registradas </h3>
+  </div> 
+  <table class="table table-striped table-hover align-middle">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Descripción</th>
+          <th scope="col">Marca</th>
+          <th scope="col">Tipo</th>
+          <th scope="col">Disponibilidad</th>
+          <th scope="col">Precio</th>
+          <th scope="col">Proveedor</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let bebida of bebidas">
+          <th scope="row">{{bebida.idBebida}}</th>
+          <td>{{bebida.nombre}}</td>
+          <td>{{bebida.descripcion}}</td>
+          <td>{{bebida.marca}}</td>
+          <td>{{bebida.tipo}}</td>
+          <td>{{bebida.disponibilidad}}</td>
+          <td>{{bebida.precio}}</td>
+          <td>{{bebida.idProveedor}}</td>
+        </tr>
+                    
+      </tbody>
+    </table>
+  </div>

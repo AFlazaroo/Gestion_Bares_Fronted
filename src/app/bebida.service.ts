@@ -7,11 +7,7 @@ import { Bebida } from './bebida';
   providedIn: 'root'
 })
 export class BebidaService {
-<<<<<<< HEAD
   private urlBase = "http://localhost:8081/bares-app/controllerBebida";
-=======
-  private urlBase = "http://localhost:8081/bares-app/controllerBebida/bebida";
->>>>>>> 942cb8808b46b18248b38bf48841755fd4ba8273
 
   constructor(private clienteHttp: HttpClient) { }
 
